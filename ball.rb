@@ -27,12 +27,10 @@ class Ball
                      
                     random_choise = rand(20)
                     print "Thinking "
-                    (1..5).each do |i|
-                    print ". "
-                    sleep 1
-                    end
                     
-		            case random_choise
+                    (1..5).each { |i| print ". "; sleep(1) }
+                  
+                    case random_choise
 		            when 0..4
 		            puts answers[random_choise].blue
 		           	when 5..9
