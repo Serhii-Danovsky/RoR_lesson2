@@ -26,8 +26,12 @@ class Ball
                    19 => 'You may rely on it' }
                      
                     random_choise = rand(20)
-                    puts "Thinking ... "
-                    sleep 2
+                    print "Thinking "
+                    (1..5).each do |i|
+                    print ". "
+                    sleep 1
+                    end
+                    
 		            case random_choise
 		            when 0..4
 		            puts answers[random_choise].blue
