@@ -26,7 +26,8 @@ class Ball
                    19 => 'You may rely on it' }
                      
                     random_choise = rand(20)
-                    puts "Thinking ..."
+                    puts "Thinking ... "
+                    sleep 2
 		            case random_choise
 		            when 0..4
 		            puts answers[random_choise].blue
