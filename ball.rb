@@ -31,14 +31,10 @@ class Ball
                     (1..5).each { |i| print ". "; sleep(1) }
                   
                     case random_choise
-		            when 0..4
-		            puts answers[random_choise].blue
-		           	when 5..9
-		            puts answers[random_choise].green
-		           	when 10..14
-		           	puts answers[random_choise].yellow
-		           	when 15..19
-		           	puts answers[random_choise].red
+		            when 0..4   then puts answers[random_choise].blue
+		           	when 5..9   then puts answers[random_choise].green
+		           	when 10..14 then puts answers[random_choise].yellow
+		           	when 15..19 then puts answers[random_choise].red
 		           	end   
 	end
 end
