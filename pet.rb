@@ -45,6 +45,28 @@ class Tamagotchi
      timelapse
   end
 
+  def scratch
+     puts 'Ви почухали ' + @name
+     @bellyfuly = @bellyfuly - 10
+     @health = @health  + 20
+     @happy =  @happy + 25
+     @toilet = @toilet + 5
+     timelapse
+  end
+
+   def gift
+     puts 'Ви дали подарунок ' + @name
+     @bellyfuly = @bellyfuly - 10
+     @happy =  @happy + 40
+     @toilet = @toilet + 5
+     timelapse
+  end
+
+  def randomm
+    random = [:gift, :scratch, :walk].sample
+    self.send(random)
+  end
+
   def play
     puts 'В що будемо грати ?'
     puts '1- Футбол на вулиці'
@@ -229,6 +251,9 @@ class Tamagotchi
      puts 'smoki -  Курити з вашим  петом'
      puts 'timelapse -  Проміжок часу'
      puts 'walk -  Гуляти з вашим  петом'
+     puts 'scratch -  Почухати вашого пета'
+     puts 'gift - Подарувати подарунок'
+     puts 'randomm - Випадкова дія'
   end
 end
 puts 'Як звати вашого пета?'
@@ -236,7 +261,7 @@ name = gets.chomp
 pet = Tamagotchi.new name
 loop do
   puts
-  puts 'команди: feed, play, gotoilet, medicine, smoki, timelapse, walk ,help ,exit'
+  puts 'команди: feed, play, gotoilet, medicine, smoki, timelapse, walk, help, scratch, gift, randomm, exit'
   command = gets.chomp
   if command == 'exit'
     exit
