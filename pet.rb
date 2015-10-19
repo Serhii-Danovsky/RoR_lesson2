@@ -173,43 +173,51 @@ class Tamagotchi
   end
 
   def notification
-    if   @bellyfuly <= 15
-         puts "Негайно покорміть #{@name} ,або  він помре".red
+    if @bellyfuly <= 15
+      puts "Негайно покорміть #{@name} ,або  він помре".red
     end
-    if   @happy <= 15
-         puts "Негайно пограйтесь з #{@name} ,або  він помре".red
+
+    if @happy <= 15
+      puts "Негайно пограйтесь з #{@name} ,або  він помре".red
     end
-     if  @health <= 15
-         puts "Негайно полікуйте #{@name} ,або  він помре".red
+
+    if @health <= 15
+      puts "Негайно полікуйте #{@name} ,або  він помре".red
     end
-     if  @toilet >= 100
-         puts "Негайно зводіть   #{@name} в туалет , або  він помре".red
+
+    if @toilet >= 100
+      puts "Негайно зводіть   #{@name} в туалет , або  він помре".red
     end
-    if   @smoking <= 10
-         puts "Негайно дайте дозу нікотину   #{@name} , або  він помре".red
+
+    if @smoking <= 10
+      puts "Негайно дайте дозу нікотину   #{@name} , або  він помре".red
     end
   end
 
   def dead
-    if   @bellyfuly <= 0
-         puts "#{@name} помер від голоду".blue.on_red
-         exit
+    if @bellyfuly <= 0
+      puts "#{@name} помер від голоду".blue.on_red
+      exit
     end
-    if   @happy <= 0
-         puts "#{@name} помер від нещастя".blue.on_red
-         exit
+
+    if @happy <= 0
+      puts "#{@name} помер від нещастя".blue.on_red
+      exit
     end
-     if  @health <= 0
-         puts "#{@name} помер від проблем зі здоров*ям".blue.on_red
-         exit
+
+    if @health <= 0
+      puts "#{@name} помер від проблем зі здоров*ям".blue.on_red
+      exit
     end
-     if  @toilet >= 100
-         puts "#{@name} помер від того що не зміг сходити в туалет".blue.on_red
-         exit
+
+    if @toilet >= 100
+      puts "#{@name} помер від того що не зміг сходити в туалет".blue.on_red
+      exit
     end
-    if   @smoking <= 1
-         puts "#{@name} помер від того що не  отримав нікотину".blue.on_red
-         exit
+
+    if @smoking <= 1
+      puts "#{@name} помер від того що не  отримав нікотину".blue.on_red
+      exit
     end
   end
 
